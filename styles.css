@@ -1,27 +1,511 @@
-body {
+/* OgĂłlne style strony */
+html {
+    cursor: url('https://www.margonem.pl/_i/pl/cursor/1.png?v=6'), pointer;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-main {
     padding: 20px;
-}
-
-footer {
+    background-color: #121212; /* Ciemne tĹo */
+    color: #fff;
+  }
+  
+  .center-container {
+    width: calc(100% - 40px);
+    margin: 60px auto;
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Kolor tekstu */
+  }
+  
+  hr {
+    width: 100%; /* Poprawione na 100% szerokoĹci */
+    border: 0; /* UsuniÄta linia */
+    border-top: 1px solid #444; /* Dodane rozdzielajÄce linie */
+    margin: 20px 0; /* Poprawione marginesy */
+  }
+  
+  h1 {
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    background: #4CAF50;
-    color: white;
-    position: relative;
-    bottom: 0;
+    margin-bottom: 20px;
+  }
+  
+  .kontakt {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .text {
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  footer {
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Stylizacja menu */
+  header {
     width: 100%;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    padding: 10px 0; /* Poprawione paddingi */
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Dodane cienie */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul.menu li {
+    display: inline-block;
+    margin-right: 20px; /* ZwiÄkszony margines miÄdzy elementami */
+  }
+  
+  nav ul.menu li:last-child {
+    margin-right: 0; /* Brak marginesu na ostatnim elemencie */
+  }
+  
+  nav ul.menu li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: url('https://www.margonem.pl/_i/pl/cursor/5.png?v=6'), pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul.menu li a:hover {
+    background-color: #555;
+    border-radius: 3px;
+  }
+  
+  /* Stylizacja przyciskĂłw */
+  button,
+  .button-primary,
+  .button-secondary {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: url('https://www.margonem.pl/_i/pl/cursor/5.png?v=6'), pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover,
+  .button-primary:hover,
+  .button-secondary:hover {
+    background-color: #444;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .button-primary,
+  .button-secondary {
+    font-size: 16px;
+    background-color: #424a52; /* Ciemne tĹo */
+    color: #fff;
+  }
+  
+  .button-success {
+    background-color: #28a745;
+  }
+  
+  .button-danger {
+    background-color: #dc3545;
+  }
+  
+  .category-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin-top: 5px;
+  }
+  
+  /* Stylizacja tabeli */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    color: #fff; /* Kolor tekstu */
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #444; /* Kolor granic komĂłrek */
+    white-space: normal; /* Tekst bÄdzie siÄ zawijaĹ */
+    word-wrap: break-word; /* Tekst bÄdzie zawijany, aby zachowaÄ szerokoĹÄ kolumny */
+    width: 150px;
+    height: 20px;
+  }
+  
+  table th {
+    background-color: #343A5F; /* Kolor tĹa nagĹĂłwkĂłw */
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  table th:not(:first-child):before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: 0;
+    width: 1px;
+    background-color: #555;
+  }
+  
+  table td {
+    background-color: #2d2d2d; /* Kolor tĹa komĂłrek */
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #292929; /* Kolor tĹa co drugiego wiersza */
+  }
+  
+  table tr:hover {
+    background-color: #444; /* Kolor tĹa wiersza po najechaniu myszkÄ */
+  }
+  
+  table td img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: url('https://www.margonem.pl/_i/pl/cursor/5.png?v=6'), pointer;
+  }
+  
+  a:hover {
+    background-color: #555;
+    border-radius: 3px;
+  }
+  
+  a:visited {
+    color: #fff;
+  }
+  
+  a:focus {
+    outline: none;
+  }
+  
+  /* Itemki margonem - ramki */
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .item-list.centered {
+    justify-content: center;
+  }
+  
+  .item-list .itemborder {
+    margin: 2px;
+  }
+  
+  iframe {
+    border: 1px solid gray;
+  }
+  
+  .margonem_item {
+    background-image: url("https://unia.margonem.pl/img/gui/it_borders.png");
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }
+  
+  .margonem_item.rarity-common {
+    background: rgba(100, 100, 100, 0.2);
+  }
+  
+  .margonem_item.rarity-unique {
+    background-position: -32px 0;
+  }
+  
+  .margonem_item.rarity-heroic {
+    background-position: -64px 0;
+  }
+  
+  .margonem_item.rarity-upgraded {
+    background-position: -96px 0;
+  }
+  
+  .margonem_item.rarity-legendary {
+    background-position: -128px 0;
+  }
+  
+  .margonem_item.rarity-artefact {
+    background-position: -160px 0;
+  }
+  
+  .itemborder {
+    padding: 2px;
+  }
+  
+  /* Podstrona news */
+  .news-section {
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    padding: 20px;
+    overflow-y: hidden;
+    height: 500px; /* ustal wysokoĹÄ sekcji, aby byĹa scrollowalna */
+  }
+  
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .news-item {
+    position: relative;
+    background-color: #212529;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .news-item h3 {
+    margin-top: 0;
+  }
+  
+  .news-item p {
+    margin-bottom: 0;
+  }
+  
+  .news-button {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cytat {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .news-item h3 {
+    margin-top: 0;
+  }
+  
+  .news-item p {
+    margin-bottom: 0;
+  }
+  
+  .news-date {
+    position: absolute;
+    font-style: italic;
+    font-size: 12px;
+    color: #888888;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  /* Stopka */
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .footer p {
+    text-align: right;
+    margin: 5px 0;
+    font-style: italic;
+    font-size: 10px;
+    color: #888888;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  /* TEST */
+  .avatar-vigellal {
+    background-image: url("https://micc.garmory-cdn.cloud/obrazki/postacie//paid/bf22_mag_m.gif");
+    width: 32px;
+    height: 48px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  
+  .avatar-kimabe {
+    background-image: url("https://micc.garmory-cdn.cloud/obrazki/postacie//clan/tarhuna_16208m.gif");
+    width: 32px;
+    height: 48px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  
+  .avatar-fraus {
+    background-image: url("https://micc.garmory-cdn.cloud/obrazki/postacie//paid/female_9.gif");
+    width: 32px;
+    height: 48px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  
+  .avatar-patrycja {
+    background-image: url("https://micc.garmory-cdn.cloud/obrazki/postacie//vip/5651221.gif");
+    width: 32px;
+    height: 48px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  
+  .avatar-berserker {
+    background-image: url("https://micc.garmory-cdn.cloud/obrazki/postacie//kuf/her_xxiv_tracker_m2.gif");
+    width: 32px;
+    height: 48px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  
+  /* Paginacja */
+  .pagination-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px; /* Zmniejsz margines */
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .pagination-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination-info {
+    margin-bottom: 5px; /* Dodaj odstÄp miÄdzy informacjÄ a przyciskami */
+  }
+  
+  /* Input */
+  #searchInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 30%;
+    font-size: 14px;
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    color: #fff;
+  }
+  
+  input::placeholder {
+    color: #fff;
+  }
+  
+  /* PrzejĹcie na numer strony */
+  #goToPageInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 10%;
+    font-size: 14px;
+    background-color: #1c1c1c; /* Ciemne tĹo */
+    color: #fff;
+  }
+  
+  #goToPageButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2px; /* Zmniejsz margines */
+  }
+  
+  #goToPageButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Inne */
+  .komunikat {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    color: #FF0000;
+  }
+  
+  .white-container {
+    width: calc(100% - 40px);
+    margin: 60px auto;
+    background-color: #1C1C2B; /* Ciemne tĹo */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Kolor tekstu */
+  }
+  
+  textarea#linksInput {
+    background: #353232;
+    color: #FFF;
+  }
+  
+  .fade-in-out {
+    animation: fadeInOut 1s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+  }
+  
+  h2 {
+    color: black;
+  }
